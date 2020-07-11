@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { fetchCategories } from './actions/fetchCategories'
 
 class App extends React.Component {
 
@@ -12,4 +14,4 @@ class App extends React.Component {
 
 }
 
-export default App;
+export default connect(null, { fetchCategories })(App);
