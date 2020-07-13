@@ -1,17 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { fetchCategories } from './actions/fetchCategories'
+import CategoriesContainer from './containers/CategoriesContainer'
+
 
 class App extends React.Component {
 
   render() {
     return (
       <div>
-        <h1>Hello!</h1>
+        <CategoriesContainer />
       </div >
     );
   }
 
 }
 
-export default connect(null, { fetchCategories })(App);
+export default connect()(App);
