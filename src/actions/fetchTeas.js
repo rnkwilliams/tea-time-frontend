@@ -5,7 +5,7 @@ export function fetchTeas() {
       .then(resp => resp.json())
       .then(teas => dispatch({
         type: 'FETCH_TEAS',
-        payload: teas
+        payload: teas.data
       }))
   }
 }

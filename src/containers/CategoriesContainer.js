@@ -1,7 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { fetchCategories } from '../actions/fetchCategories'
+import { Route } from 'react-router-dom'
 import Categories from '../components/Categories'
+import Category from '../components/Category'
 
 
 class CategoriesContainer extends React.Component {
@@ -13,7 +15,8 @@ class CategoriesContainer extends React.Component {
   render() {
     return (
       <div>
-        <Categories categories={this.props.categories} />
+        <Route path='/categories/:id' render={(routerProps) => <Category {...routerProps} categories={this.props.categories} />} />
+        <Route exact path='/categories' render={(routerProps) => <Categories {...routerProps} categories={this.props.categories} />} />
       </div>
     )
   }

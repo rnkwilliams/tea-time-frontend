@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
+import { BrowserRouter as Router } from 'react-router-dom'
 import thunk from 'redux-thunk'
 import categoryReducer from './reducers/categoryReducer'
+import teaReducer from './reducers/teaReducer'
 
 import App from './App';
 
@@ -13,7 +15,9 @@ const store = createStore(categoryReducer, composeEnhancers(applyMiddleware(thun
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById('root'));
 
