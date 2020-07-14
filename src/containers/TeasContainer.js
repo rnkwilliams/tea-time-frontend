@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { fetchTeas } from '../actions/fetchTeas'
+import { Route, Switch } from 'react-router-dom'
 import TeaForm from '../components/TeaForm'
 import Teas from '../components/Teas'
 
@@ -13,10 +14,12 @@ class TeasContainer extends React.Component {
 
   render() {
     return (
+
       <div>
-        <TeaForm />
+        <Route path='/teas/new' component={TeaForm} />
         <Teas teas={this.props.teas} />
       </div>
+
     )
   }
 }
