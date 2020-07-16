@@ -1,7 +1,15 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { deleteTea } from '../actions/deleteTea'
 
 const Teas = (props) => {
-  //console.log(props)
+  console.log(props)
+  //debugger;
+
+  const handleDelete = (tea) => {
+    props.deleteTea(tea.id)
+  }
+
   return (
     <div>
       {props.teas.map(tea =>
@@ -12,11 +20,12 @@ const Teas = (props) => {
           Water Temperature: {tea.attributes.temp} F<br></br>
           Steep Time: {tea.attributes.time} mins<br></br>
           Category: {tea.attributes.category.name}<br></br>
-          Flavor Notes: {tea.attributes.notes}
+          Flavor Notes: {tea.attributes.notes}<br></br>
+          <button onClick={() => handleDelete(tea)}>Delete</button>
         </div>
       )}
     </div>
   )
 }
 
-export default Teas
+export default connect(null, { deleteTea })(Teas)
