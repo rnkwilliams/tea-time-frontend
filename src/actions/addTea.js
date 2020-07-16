@@ -11,7 +11,7 @@ export const addTea = (data) => {
       body: JSON.stringify(data)
     })
       .then(resp => resp.json())
-      .then(tea => dispatch({ type: 'ADD_TEA', payload: tea }))
+      .then(tea => dispatch({ type: 'ADD_TEA', payload: tea.data }))
   }
 
 }
