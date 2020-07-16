@@ -1,15 +1,14 @@
-export default function teaReducer(state = { teas: [] }, action) {
+export default function teaReducer(state = [], action) {
 
   switch (action.type) {
     case 'FETCH_TEAS':
-      return { teas: action.payload }
+      return action.payload
 
     case 'ADD_TEA':
-      return { ...state, teas: [...state.teas, action.payload] }
+      return state.concat(action.payload)
 
     case 'DELETE_TEA':
-      const teas = state.teas.filter(tea => tea.id !== action.payload)
-      return { ...state, teas }
+      return state.filter(tea => tea.id !== action.payload)
 
     default:
       return state

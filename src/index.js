@@ -10,14 +10,14 @@ import App from './App';
 import categoryReducer from './reducers/categoryReducer'
 import teaReducer from './reducers/teaReducer'
 
-// const rootReducer = combineReducers({
-//   categoryReducer,
-//   teaReducer
-// })
+const rootReducer = combineReducers({
+  categories: categoryReducer,
+  teas: teaReducer
+})
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(teaReducer, composeEnhancers(applyMiddleware(thunk)))
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <Provider store={store}>

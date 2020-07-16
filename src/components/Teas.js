@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { deleteTea } from '../actions/deleteTea'
 
 const Teas = (props) => {
-  console.log(props)
+  //console.log(props)
   //debugger;
 
   const handleDelete = (tea) => {
