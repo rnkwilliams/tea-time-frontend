@@ -17,7 +17,7 @@ class TeasContainer extends React.Component {
 
       <div>
         <Route path='/teas/new' component={TeaForm} />
-        <Teas teas={this.props.teas} />
+        <Route exact path='/teas' render={(routerProps) => <Teas {...routerProps} teas={this.props.teas} />} />
       </div>
 
     )
