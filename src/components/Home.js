@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div>
       <h1>Welcome to TeaTime</h1>
-      <Link to="/teas">Explore Tea Library</Link>
+      <Link to="/categories">Explore Tea Library</Link>
     </div>
   )
 }
