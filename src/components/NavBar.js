@@ -8,7 +8,7 @@ const NavBar = () => {
       <NavLink to="/categories">Tea Library</NavLink>
       <NavLink to="/teas/new">New Tea</NavLink>
       <NavLink to="/teas">My Teas</NavLink>
-      Timer
+      <NavLink to="/timer">Timer</NavLink>
     </div>
   )
 }
