@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route } from 'react-router-dom'
 import Timer from '../components/Timer'
 import TimerLength from '../components/TimerLength'
 

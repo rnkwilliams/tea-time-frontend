@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { fetchTeas } from '../actions/fetchTeas'
-import { Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import TeaForm from '../components/TeaForm'
 import Teas from '../components/Teas'
 
