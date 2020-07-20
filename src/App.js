@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import './App.css';
 import CategoriesContainer from './containers/CategoriesContainer'
 import TeasContainer from './containers/TeasContainer'
@@ -15,9 +15,10 @@ class App extends React.Component {
       <div className='App'>
         <NavBar />
         <Route exact path='/' component={Home} />
-        <TeasContainer />
-        <CategoriesContainer /><br></br><br></br>
-        <Route exact path='/:timer' component={TimerContainer} />
+        <Route exact path='/categories' component={CategoriesContainer} />
+        <Route exact path='/teas/new' component={TeasContainer} />
+        <Route exact path='/teas' component={TeasContainer} />
+        <Route exact path='/timer' component={TimerContainer} />
       </div >
     );
   }
