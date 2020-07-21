@@ -7,11 +7,12 @@ const Tea = (props) => {
   // debugger;
 
   let tea = props.teas.filter(tea => tea.id === props.match.params.id)[0]
+  const { history } = props
 
   //console.log(tea)
 
-  const handleDelete = (tea) => {
-    props.deleteTea(tea.id)
+  const handleDelete = (tea, history) => {
+    props.deleteTea(tea.id, history)
   }
 
   return (
@@ -23,7 +24,7 @@ const Tea = (props) => {
       Steep Time: {tea ? tea.attributes.time : null} mins<br></br>
       Category: {tea ? tea.attributes.category.name : null}<br></br>
       Flavor Notes: {tea ? tea.attributes.notes : null}<br></br>
-      <button onClick={() => handleDelete(tea)}>Delete</button>
+      <button onClick={() => handleDelete(tea, history)}>Delete</button>
       {/* <button onClick={() => handleDelete(tea)}>Edit</button> */}
     </div>
   )
