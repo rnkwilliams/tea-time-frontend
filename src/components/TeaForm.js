@@ -22,8 +22,9 @@ class TeaForm extends React.Component {
   }
 
   handleSubmit = (event) => {
+    const { history } = this.props
     event.preventDefault()
-    this.props.addTea(this.state)
+    this.props.addTea(this.state, history)
     this.setState({
       name: '',
       time: '',
@@ -67,7 +68,6 @@ class TeaForm extends React.Component {
           <textarea name='notes' value={this.state.notes} onChange={this.handleChange} /><br></br>
           <input type='submit' value='Add Tea' />
         </form>
-        <hr></hr>
       </div>
     )
   }
