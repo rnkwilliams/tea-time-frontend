@@ -3,8 +3,7 @@ import { Redirect } from 'react-router-dom'
 
 const Category = (props) => {
 
-  let category = props.categories[props.match.params.id - 1]
-  console.log(category)
+  let category = props.categories.filter(category => category.id === props.match.params.id)[0]
 
   return (
     <div>
