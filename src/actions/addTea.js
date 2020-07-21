@@ -1,5 +1,5 @@
 
-export const addTea = (data) => {
+export const addTea = (data, history) => {
 
   return (dispatch) => {
     fetch('http://localhost:3000/api/v1/teas', {
@@ -12,6 +12,7 @@ export const addTea = (data) => {
     })
       .then(resp => resp.json())
       .then(tea => dispatch({ type: 'ADD_TEA', payload: tea.data }))
+    history.push(`/teas`)
   }
 
 }
