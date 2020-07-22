@@ -10,6 +10,9 @@ export default function teaReducer(state = [], action) {
     case 'DELETE_TEA':
       return state.filter(tea => tea.id !== action.payload)
 
+    case 'EDIT_TEA':
+      return state.filter(tea => tea.id !== action.payload)
+
     default:
       return state
   }
