@@ -1,32 +1,31 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { deleteTea } from '../actions/deleteTea'
+import { Link } from 'react-router-dom'
 
 const Tea = (props) => {
-  console.log(props)
-  // debugger;
 
   let tea = props.teas.filter(tea => tea.id === props.match.params.id)[0]
   const { history } = props
-
-  //console.log(tea)
 
   const handleDelete = (tea, history) => {
     props.deleteTea(tea.id, history)
   }
 
   return (
-    <div>
-      <h2>{tea ? tea.attributes.name : null}</h2>
-      Tea Amount: {tea ? tea.attributes.amount : null} tsp<br></br>
-      Water Amount: {tea ? tea.attributes.water : null} ml<br></br>
-      Water Temperature: {tea ? tea.attributes.temp : null} F<br></br>
-      Steep Time: {tea ? tea.attributes.time : null} mins<br></br>
-      Category: {tea ? tea.attributes.category.name : null}<br></br>
-      Flavor Notes: {tea ? tea.attributes.notes : null}<br></br>
-      <button onClick={() => handleDelete(tea, history)}>Delete</button>
-      {/* <button onClick={() => handleDelete(tea)}>Edit</button> */}
-    </div>
+    tea ?
+      <div>
+        <h2>{tea.attributes.name}</h2>
+        Tea Amount: {tea.attributes.amount} tsp<br></br>
+        Water Amount: {tea.attributes.water} ml<br></br>
+        Water Temperature: {tea.attributes.temp} F<br></br>
+        Steep Time: {tea.attributes.time} mins<br></br>
+        Category: {tea.attributes.category.name}<br></br>
+        Flavor Notes: {tea.attributes.notes}<br></br>
+        <button onClick={() => handleDelete(tea, history)}>Delete</button>
+        <Link to={`/teas/${tea.id}/edit`}> Edit Tea</Link>
+      </div> :
+      <p>This tea does not exist!</p>
   )
 }
 
