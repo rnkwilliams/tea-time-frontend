@@ -6,17 +6,19 @@ const Category = (props) => {
   let category = props.categories.filter(category => category.id === props.match.params.id)[0]
 
   return (
-    <div>
-      {category ? category.attributes.name : null}
+    category ?
       <div>
-        {category ? <img src={category.attributes.img_url}
-          alt={category.attributes.name} /> : null}
-      </div>
-      {category ? category.attributes.description : null}<br></br><br></br>
+        {category.attributes.name}
+        <div>
+          {<img src={category.attributes.img_url}
+            alt={category.attributes.name} />}
+        </div>
+        {category.attributes.description}<br></br><br></br>
 
-      <label>Brewing Instructions: </label>
-      {category ? category.attributes.instructions : null}
-    </div>
+        <label>Brewing Instructions: </label>
+        {category.attributes.instructions}
+      </div> :
+      <p>This category does not exist!</p>
   )
 }
 
