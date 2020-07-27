@@ -3,14 +3,14 @@ import { connect } from 'react-redux'
 import { deleteTea } from '../actions/deleteTea'
 import { Link } from 'react-router-dom'
 
-const Tea = (props) => {
+const Tea = ({ tea }) => {
 
-  let tea = props.teas.filter(tea => tea.id === props.match.params.id)[0]
-  const { history } = props
+  // let tea = props.teas.filter(tea => tea.id === props.match.params.id)[0]
+  // const { history } = props
 
-  const handleDelete = (tea, history) => {
-    props.deleteTea(tea.id, history)
-  }
+  // const handleDelete = (tea, history) => {
+  //   props.deleteTea(tea.id, history)
+  // }
 
   return (
     tea ?
@@ -22,8 +22,9 @@ const Tea = (props) => {
         Steep Time: {tea.attributes.time} mins<br></br>
         Category: {tea.attributes.category.name}<br></br>
         Flavor Notes: {tea.attributes.notes}<br></br>
-        <button onClick={() => handleDelete(tea, history)}>Delete</button>
+        {/* <button onClick={() => handleDelete(tea, history)}>Delete</button> */}
         <Link to={`/teas/${tea.id}/edit`}> Edit Tea</Link>
+        {/* <TeaEditForm tea={tea} /> */}
       </div> :
       <p>This tea does not exist!</p>
   )
