@@ -15,7 +15,6 @@ class TeasContainer extends React.Component {
   }
 
   render() {
-    // const tea = props.teas.filter(tea => tea.id === props.match.params.id)[0]
     const { teas } = this.props
     console.log(teas)
 
@@ -25,7 +24,6 @@ class TeasContainer extends React.Component {
           <Route exact path='/teas/new' component={TeaForm} />
           <Route path='/teas/:id/edit' render={(props) => {
             const tea = teas.filter(tea => tea.id === props.match.params.id)[0]
-            console.log(tea)
             return <TeaEditForm {...props} tea={tea} />
           }} />
 
