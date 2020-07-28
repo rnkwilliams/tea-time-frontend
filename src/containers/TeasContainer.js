@@ -16,7 +16,6 @@ class TeasContainer extends React.Component {
 
   render() {
     const { teas } = this.props
-    console.log(teas)
 
     return (
       <div>
