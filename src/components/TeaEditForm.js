@@ -1,8 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { editTea, setFormDataForEdit } from '../actions/editTea'
+import { editTea } from '../actions/editTea'
 import { deleteTea } from '../actions/deleteTea'
-// import TeaForm from './TeaForm'
 
 class TeaEditForm extends React.Component {
 
@@ -17,8 +16,15 @@ class TeaEditForm extends React.Component {
   }
 
   componentDidMount() {
-    //debugger;
-    this.props.tea && this.props.setFormDataForEdit(this.props.tea)
+    this.setState({
+      name: this.props.tea.attributes.name,
+      time: this.props.tea.attributes.time,
+      amount: this.props.tea.attributes.amount,
+      temp: this.props.tea.attributes.temp,
+      water: this.props.tea.attributes.water,
+      notes: this.props.tea.attributes.notes,
+      category_id: this.props.tea.attributes.category_id
+    })
   }
 
   handleChange = (event) => {
@@ -28,7 +34,6 @@ class TeaEditForm extends React.Component {
   }
 
   handleSubmit = (event) => {
-    //debugger;
     const { history } = this.props
     let tea = { ...this.state, id: this.props.tea.id }
     event.preventDefault()
@@ -47,9 +52,8 @@ class TeaEditForm extends React.Component {
   render() {
     const { history, deleteTea, tea } = this.props
     const teaId = tea ? tea.id : null
-    return (
 
-      // <TeaForm editMode handleSubmit={this.handleSubmit} />
+    return (
       < div >
         <form onSubmit={this.handleSubmit}>
           <h1>Edit Tea</h1>
@@ -85,4 +89,4 @@ class TeaEditForm extends React.Component {
   }
 }
 
-export default connect(null, { editTea, deleteTea, setFormDataForEdit })(TeaEditForm);
+export default connect(null, { editTea, deleteTea })(TeaEditForm);
