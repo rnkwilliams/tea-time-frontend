@@ -15,19 +15,19 @@ export const editTea = (data, history) => {
   }
 }
 
-export const setFormDataForEdit = tea => {
-  //debugger;
-  const teaFormData = {
-    name: tea.attributes.name,
-    time: tea.attributes.time,
-    amount: tea.attributes.amount,
-    temp: tea.attributes.temp,
-    water: tea.attributes.water,
-    notes: tea.attributes.notes,
-    category_id: tea.attributes.category_id
-  }
-  return {
-    type: "SET_FORM_DATA_FOR_EDIT",
-    teaFormData
-  }
-}
+// export const setFormDataForEdit = tea => {
+//   debugger;
+//   const teaFormData = {
+//     name: tea.attributes.name,
+//     time: tea.attributes.time,
+//     amount: tea.attributes.amount,
+//     temp: tea.attributes.temp,
+//     water: tea.attributes.water,
+//     notes: tea.attributes.notes,
+//     category_id: tea.attributes.category_id
+//   }
+//   return {
+//     type: "SET_FORM_DATA_FOR_EDIT",
+//     payload: teaFormData
+//   }
+// }
