@@ -13,10 +13,10 @@ export default function teaReducer(state = [], action) {
     case 'EDIT_TEA':
       return state.map(tea => tea.id === action.payload.id ? action.payload : tea)
 
-    case 'SET_FORM_DATA_FOR_EDIT':
-      //debugger;
-      //console.log(action.teaFormData)
-      return action.teaFormData
+    // case 'SET_FORM_DATA_FOR_EDIT':
+    //   //debugger;
+    //   //console.log(action.teaFormData)
+    //   return action.payload
 
     default:
       return state
