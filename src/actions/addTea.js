@@ -11,8 +11,13 @@ export const addTea = (data, history) => {
       body: JSON.stringify(data)
     })
       .then(resp => resp.json())
-      .then(tea => dispatch({ type: 'ADD_TEA', payload: tea.data }))
-    history.push(`/teas`)
+      .then(tea => {
+        if (tea.error) {
+          alert('Please complete all fields!')
+        } else {
+          dispatch({ type: 'ADD_TEA', payload: tea.data })
+          history.push(`/teas`)
+        }
+      })
   }
-
 }

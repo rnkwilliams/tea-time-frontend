@@ -1,5 +1,4 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
 
 const Category = (props) => {
 
@@ -10,8 +9,7 @@ const Category = (props) => {
       <div>
         {category.attributes.name}
         <div>
-          {<img src={category.attributes.img_url}
-            alt={category.attributes.name} />}
+          {<img src={category.attributes.img_url} alt={category.attributes.name} />}
         </div>
         {category.attributes.description}<br></br><br></br>
 
