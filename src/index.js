@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
 import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
@@ -11,6 +10,7 @@ import thunk from 'redux-thunk'
 import App from './App';
 import categoryReducer from './reducers/categoryReducer'
 import teaReducer from './reducers/teaReducer'
+import './assets/css/bootstrap.min.css'
 
 const rootReducer = combineReducers({
   categories: categoryReducer,

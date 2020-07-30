@@ -51,20 +51,30 @@ class TimerContainer extends React.Component {
 
   render() {
     return (
-      <div>
-        <TimerLength
-          timerLength={this.state.timerLength}
-          isPlay={this.state.isPlay}
-          increaseTime={this.onIncreaseTimerLength}
-          decreaseTime={this.onDecreaseTimerLength}
-        /><br></br><br></br>
-        <Timer
-          timerMinute={this.state.timerMinute}
-          decreaseTimerMinute={this.decreaseTimerMinute}
-          resetTimer={this.resetTimer}
-          onPlayStopTimer={this.onPlayStopTimer}
-        />
-      </div >
+      <section className="page-section bg-light" id="portfolio">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="section-heading text-uppercase">Tea Timer</h2>
+            <h3 className="section-subheading text-muted">Use timer to brew your tea.</h3>
+          </div>
+
+          <div>
+            <TimerLength
+              timerLength={this.state.timerLength}
+              isPlay={this.state.isPlay}
+              increaseTime={this.onIncreaseTimerLength}
+              decreaseTime={this.onDecreaseTimerLength}
+            />
+            <Timer
+              timerMinute={this.state.timerMinute}
+              decreaseTimerMinute={this.decreaseTimerMinute}
+              resetTimer={this.resetTimer}
+              onPlayStopTimer={this.onPlayStopTimer}
+            />
+          </div >
+
+        </div>
+      </section>
     );
   }
 }

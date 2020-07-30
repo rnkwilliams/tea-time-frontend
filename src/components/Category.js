@@ -6,16 +6,23 @@ const Category = (props) => {
 
   return (
     category ?
-      <div>
-        {category.attributes.name}
-        <div>
-          {<img src={category.attributes.img_url} alt={category.attributes.name} />}
-        </div>
-        {category.attributes.description}<br></br><br></br>
+      <section className="page-section" id="services">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="section-heading text-uppercase">{category.attributes.name}</h2>
+          </div>
 
-        <label>Brewing Instructions: </label>
-        {category.attributes.instructions}
-      </div> :
+          <div>
+            <div>
+              {<img src={category.attributes.img_url} alt={category.attributes.name} />}
+            </div>
+            {category.attributes.description}<br></br><br></br>
+
+            <label>Brewing Instructions: </label>
+            {category.attributes.instructions}
+          </div>
+        </div>
+      </section> :
       <p>This category does not exist!</p>
   )
 }
