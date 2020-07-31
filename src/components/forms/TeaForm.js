@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTea } from '../actions/addTea'
+import { addTea } from '../../actions/addTea'
 
 
 class TeaForm extends React.Component {

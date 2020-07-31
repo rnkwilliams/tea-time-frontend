@@ -1,6 +1,6 @@
 import React from 'react';
-import Timer from '../components/Timer'
-import TimerLength from '../components/TimerLength'
+import Timer from '../components/timer/Timer'
+import TimerLength from '../components/timer/TimerLength'
 
 
 class TimerContainer extends React.Component {

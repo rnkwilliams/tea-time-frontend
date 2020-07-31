@@ -2,10 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fetchTeas } from '../actions/fetchTeas'
 import { Route, Switch } from 'react-router-dom'
-import TeaForm from '../components/TeaForm'
-import TeaEditForm from '../components/TeaEditForm'
-import Tea from '../components/Tea'
-import Teas from '../components/Teas'
+import TeaForm from '../components/forms/TeaForm'
+import TeaEditForm from '../components/forms/TeaEditForm'
+import Tea from '../components/teas/Tea'
+import Teas from '../components/teas/Teas'
 
 
 class TeasContainer extends React.Component {

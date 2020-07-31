@@ -18,7 +18,7 @@ const Category = (props) => {
             </div>
             {category.attributes.description}<br></br><br></br>
 
-            <label>Brewing Instructions: </label>
+            <label>Brewing Instructions: </label>{' '}
             {category.attributes.instructions}
           </div>
         </div>

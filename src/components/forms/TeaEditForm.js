@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { editTea } from '../actions/editTea'
-import { deleteTea } from '../actions/deleteTea'
+import { editTea } from '../../actions/editTea'
+import { deleteTea } from '../../actions/deleteTea'
 
 class TeaEditForm extends React.Component {
 
