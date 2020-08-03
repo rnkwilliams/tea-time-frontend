@@ -26,8 +26,8 @@ const Categories = (props) => {
         <div className="row text-center">
 
           {props.categories.map(category =>
-            <div className="col-md-4">
-              <div key={category.id}>
+            <div className="col-md-4" key={category.id}>
+              <div>
                 <Link to={`/categories/${category.id}`}>
                   <img src={category.attributes.img_url} alt={category.attributes.name} />
                   <h4 className="my-3">{category.attributes.name}</h4>

@@ -30,10 +30,10 @@ const Teas = (props) => {
         <div className="row">
 
           {props.teas.map(tea =>
-            <div className="col-lg-4 col-sm-6 mb-4">
+            <div className="col-lg-4 col-sm-6 mb-4" key={tea.id}>
               <div className="portfolio-item">
                 <div className="portfolio-caption">
-                  <div key={tea.id}>
+                  <div>
                     <Link to={`/teas/${tea.id}`}>
                       <img className="img-fluid" src="https://source.unsplash.com/FmgZ5xzDG-s/1600x900" alt="" />
                       <div className="portfolio-caption-heading">{tea.attributes.name}</div>
