@@ -1,3 +1,5 @@
+TeaTime is a single-page application(SPA) using a Rails API backend with React/Redux frontend. TeaTime the place where tea drinkers can go to learn about different tea types, keep track of their own teas, and have the option to use a timer for brewing.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
