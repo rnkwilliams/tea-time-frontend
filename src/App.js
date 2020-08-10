@@ -18,7 +18,7 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route path='/categories' component={CategoriesContainer} />
           <Route path='/teas' component={TeasContainer} />
-          <Route exact path='/timer' component={TimerContainer} />
+          <Route path='/timer' component={TimerContainer} />
         </Switch>
       </div >
     );

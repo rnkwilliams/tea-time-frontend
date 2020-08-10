@@ -20,7 +20,7 @@ class TeasContainer extends React.Component {
     return (
       <div>
         <Switch>
-          <Route exact path='/teas/new' component={TeaForm} />
+          <Route path='/teas/new' component={TeaForm} />
           <Route path='/teas/:id/edit' render={(props) => {
             const tea = teas.filter(tea => tea.id === props.match.params.id)[0]
             return <TeaEditForm {...props} tea={tea} />
