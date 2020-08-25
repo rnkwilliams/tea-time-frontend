@@ -4,18 +4,6 @@ import { Link } from 'react-router-dom'
 const Categories = (props) => {
 
   return (
-    // <div>
-    //   {props.categories.map(category =>
-    //     <div key={category.id}>
-    //       <Link to={`/categories/${category.id}`}>
-    //         <h2>{category.attributes.name}</h2>
-    //         <div>
-    //           <img src={category.attributes.img_url} alt={category.attributes.name} />
-    //         </div>
-    //       </Link>
-    //     </div>)}
-    // </div >
-
     <section className="page-section" id="services">
       <div className="container">
         <div className="text-center">
@@ -24,7 +12,6 @@ const Categories = (props) => {
         </div>
 
         <div className="row text-center">
-
           {props.categories.map(category =>
             <div className="col-md-4" key={category.id}>
               <div>
@@ -34,7 +21,6 @@ const Categories = (props) => {
                 </Link>
               </div>
             </div>)}
-
         </div>
       </div>
     </section>

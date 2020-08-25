@@ -4,12 +4,6 @@ import { NavLink } from 'react-router-dom'
 const NavBar = () => {
   return (
     <div className='NavBar'>
-      {/* <NavLink to="/">TeaTime</NavLink>
-      <NavLink to="/categories">Tea Library</NavLink>
-      <NavLink to="/teas/new">Add New Tea</NavLink>
-      <NavLink to="/teas">My Teas</NavLink>
-      <NavLink to="/timer">Timer</NavLink> */}
-
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div className="container">
           <NavLink className="navbar-brand js-scroll-trigger" href="#page-top" to="/">TeaTime</NavLink>
