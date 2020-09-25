@@ -6,7 +6,7 @@ const Home = () => {
     <div>
       <header className="masthead">
         <div className="container">
-          <div className="masthead-subheading">Welcome To TeaTime!</div>
+          <div className="masthead-subheading">Welcome To TeaTime</div>
           <div className="masthead-heading text-uppercase">A Home For Your Teas</div>
           <Link className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" to="/categories">Explore Tea Library</Link>
         </div>

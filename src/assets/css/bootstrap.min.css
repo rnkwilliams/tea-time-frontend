@@ -10140,6 +10140,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
+  height: 100vh;
   background-image: url("../img/tea-599227_1280.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
