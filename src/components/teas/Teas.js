@@ -21,6 +21,7 @@ const Teas = (props) => {
                     <Link to={`/teas/${tea.id}`}>
                       <img className="img-fluid" src="https://source.unsplash.com/FmgZ5xzDG-s/1600x900" alt="" />
                       <div className="portfolio-caption-heading">{tea.attributes.name}</div>
+                      <div>{tea.attributes.category.name}</div>
                     </Link>
                     {/* <Rating tea={tea} key={tea.id} /> */}
                   </div>
